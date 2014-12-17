@@ -1,0 +1,26 @@
+{
+	"name": "orchestra/testing",
+	"description": "Testing Helper Component for Orchestra Platform",
+	"license": "MIT",
+	"authors": [
+		{
+			"name": "Mior Muhammad Zaki",
+			"email": "crynobone@gmail.com",
+			"homepage": "https://github.com/crynobone"
+		}
+	],
+	"autoload": {
+		"psr-4": {
+			"Orchestra\\Testing\\": "src/"
+		}
+	},
+	"require": {
+		"orchestra/testbench": "3.0.*"
+	},
+	"extra": {
+		"branch-alias": {
+			"dev-master": "3.0-dev"
+		}
+	},
+	"minimum-stability": "dev"
+}
