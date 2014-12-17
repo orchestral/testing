@@ -171,6 +171,6 @@ abstract class TestCase extends TestbenchTestCase
      */
     protected function resolveApplicationHttpKernel($app)
     {
-        $app->singleton('Illuminate\Contracts\Http\Kernel', 'Orchestra\Foundation\Testing\Http\Kernel');
+        $app->singleton('Illuminate\Contracts\Http\Kernel', 'Orchestra\Testing\Http\Kernel');
     }
 }
