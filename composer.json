@@ -1,6 +1,6 @@
 {
 	"name": "orchestra/testing",
-	"description": "Testing Helper Component for Orchestra Platform",
+	"description": "Orchestra Platform Testing Helper",
 	"license": "MIT",
 	"authors": [
 		{
