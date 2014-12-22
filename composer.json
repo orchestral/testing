@@ -16,7 +16,6 @@
 	},
 	"require": {
 		"orchestra/foundation": "3.0.*",
-		"orchestra/installer": "3.0.*",
 		"orchestra/testbench": "3.0.*"
 	},
 	"extra": {
