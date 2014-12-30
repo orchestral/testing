@@ -9,8 +9,7 @@ class Kernel extends BaseKernel
      *
      * @var array
      */
-    protected $bootstrappers = [
-    ];
+    protected $bootstrappers = [];
 
     /**
      * The application's middleware stack.
