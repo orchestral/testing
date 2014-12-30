@@ -15,11 +15,6 @@ return [
 
     'files' => [
 
-        app_path('Providers/AppServiceProvider.php'),
-        app_path('Providers/EventServiceProvider.php'),
-        app_path('Providers/ExtensionServiceProvider.php'),
-        app_path('Providers/RouteServiceProvider.php'),
-
     ],
 
     /*
