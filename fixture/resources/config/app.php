@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'debug' => env('APP_DEBUG') ?: false,
+    'debug' => env('APP_DEBUG', false),
 
     /*
     |--------------------------------------------------------------------------
@@ -26,7 +26,7 @@ return [
     |
     */
 
-    'url' => env('APP_URL') ?: 'http://localhost',
+    'url' => env('APP_URL', 'http://localhost'),
 
     /*
     |--------------------------------------------------------------------------
@@ -78,7 +78,7 @@ return [
     |
     */
 
-    'key' => env('APP_KEY') ?: 'YourSecretKey!!!',
+    'key' => env('APP_KEY', 'YourSecretKey!!!'),
 
     'cipher' => MCRYPT_RIJNDAEL_128,
 
@@ -113,7 +113,6 @@ return [
         /*
          * Laravel Framework Service Providers...
          */
-        'Illuminate\Foundation\Providers\ArtisanServiceProvider',
         'Illuminate\Bus\BusServiceProvider',
         'Illuminate\Cache\CacheServiceProvider',
         'Illuminate\Cookie\CookieServiceProvider',
@@ -133,6 +132,7 @@ return [
         /*
          * Orchestra Platform Service Providers...
          */
+        'Orchestra\Foundation\Providers\ArtisanServiceProvider',
         'Orchestra\Asset\AssetServiceProvider',
         'Orchestra\Auth\AuthServiceProvider',
         'Orchestra\Authorization\AuthorizationServiceProvider',
