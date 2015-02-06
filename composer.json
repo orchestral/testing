@@ -15,8 +15,8 @@
 		}
 	},
 	"require": {
-		"orchestra/foundation": "3.0.*",
-		"orchestra/testbench": "3.0.*"
+		"orchestra/foundation": "3.1.*",
+		"orchestra/testbench": "3.1.*"
 	},
 	"extra": {
 		"branch-alias": {
