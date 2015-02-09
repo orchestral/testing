@@ -16,8 +16,8 @@ abstract class ApplicationTestCase extends TestCase
         $app = parent::createApplication();
 
         $bootstraps = [
-            'Orchestra\Foundation\Bootstrap\UserAccessPolicy',
             'Orchestra\Foundation\Bootstrap\LoadFoundation',
+            'Orchestra\Foundation\Bootstrap\UserAccessPolicy',
             'Orchestra\Extension\Bootstrap\LoadExtension',
             'Orchestra\Foundation\Bootstrap\LoadUserMetaData',
             'Orchestra\View\Bootstrap\LoadCurrentTheme',
