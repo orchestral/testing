@@ -15,7 +15,7 @@
 		}
 	},
 	"require": {
-		"orchestra/foundation": "3.0.*",
+		"php": ">=5.4.0",
 		"orchestra/testbench": "3.0.*"
 	},
 	"extra": {
