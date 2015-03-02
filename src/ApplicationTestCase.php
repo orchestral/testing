@@ -31,10 +31,11 @@ abstract class ApplicationTestCase extends TestCase
         return $app;
     }
 
-     /**
+    /**
      * Get application aliases.
      *
      * @param  \Illuminate\Foundation\Application  $app
+     *
      * @return array
      */
     protected function getApplicationAliases($app)
@@ -46,6 +47,7 @@ abstract class ApplicationTestCase extends TestCase
      * Get application providers.
      *
      * @param  \Illuminate\Foundation\Application  $app
+     *
      * @return array
      */
     protected function getApplicationProviders($app)
@@ -72,6 +74,7 @@ abstract class ApplicationTestCase extends TestCase
      * Resolve application Console Kernel implementation.
      *
      * @param  \Illuminate\Foundation\Application  $app
+     *
      * @return void
      */
     protected function resolveApplicationConsoleKernel($app)
@@ -83,6 +86,7 @@ abstract class ApplicationTestCase extends TestCase
      * Resolve application HTTP Kernel implementation.
      *
      * @param  \Illuminate\Foundation\Application  $app
+     *
      * @return void
      */
     protected function resolveApplicationHttpKernel($app)
