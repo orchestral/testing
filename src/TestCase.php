@@ -9,6 +9,7 @@ abstract class TestCase extends TestbenchTestCase
      * Get application aliases.
      *
      * @param  \Illuminate\Foundation\Application  $app
+     *
      * @return array
      */
     protected function getApplicationAliases($app)
@@ -20,6 +21,7 @@ abstract class TestCase extends TestbenchTestCase
      * Get package aliases.
      *
      * @param  \Illuminate\Foundation\Application  $app
+     *
      * @return array
      */
     protected function getPackageAliases($app)
@@ -31,6 +33,7 @@ abstract class TestCase extends TestbenchTestCase
      * Get application providers.
      *
      * @param  \Illuminate\Foundation\Application  $app
+     *
      * @return array
      */
     protected function getApplicationProviders($app)
@@ -42,6 +45,7 @@ abstract class TestCase extends TestbenchTestCase
      * Get package providers.
      *
      * @param  \Illuminate\Foundation\Application  $app
+     *
      * @return array
      */
     protected function getPackageProviders($app)
@@ -53,6 +57,7 @@ abstract class TestCase extends TestbenchTestCase
      * Define environment setup.
      *
      * @param  \Illuminate\Foundation\Application   $app
+     *
      * @return void
      */
     protected function getEnvironmentSetUp($app)
