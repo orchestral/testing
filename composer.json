@@ -16,8 +16,10 @@
 	},
 	"require": {
 		"php": ">=5.4.0",
-		"orchestra/foundation": "3.1.*",
 		"orchestra/testbench": "3.1.*"
+	},
+	"require-dev": {
+		"orchestra/foundation": "3.1.*"
 	},
 	"extra": {
 		"branch-alias": {
