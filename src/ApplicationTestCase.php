@@ -65,7 +65,6 @@ abstract class ApplicationTestCase extends TestCase
         $app = new Application($this->getBasePath());
 
         $app->singleton('Illuminate\Foundation\Bootstrap\LoadConfiguration', 'Orchestra\Config\Bootstrap\LoadConfiguration');
-        $app->singleton('Illuminate\Contracts\Debug\ExceptionHandler', 'App\Exceptions\Handler');
 
         return $app;
     }
@@ -92,5 +91,17 @@ abstract class ApplicationTestCase extends TestCase
     protected function resolveApplicationHttpKernel($app)
     {
         $app->singleton('Illuminate\Contracts\Http\Kernel', 'App\Http\Kernel');
+    }
+
+    /**
+     * Resolve application HTTP exception handler.
+     *
+     * @param  \Illuminate\Foundation\Application  $app
+     *
+     * @return void
+     */
+    protected function resolveApplicationExceptionHandler($app)
+    {
+        $app->singleton('Illuminate\Contracts\Debug\ExceptionHandler', 'App\Exceptions\Handler');
     }
 }
