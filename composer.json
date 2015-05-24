@@ -23,11 +23,11 @@
 		"orchestra/foundation": "3.1.*"
 	},
 	"suggest": {
-		"orchestra/foundation": "Allow testing extension for Orchestra Platform (~3.0)"
+		"orchestra/foundation": "Allow testing extension for Orchestra Platform (~3.0)."
 	},
 	"extra": {
 		"branch-alias": {
-			"dev-master": "3.1-dev"
+			"dev-master": "3.2-dev"
 		}
 	},
 	"minimum-stability": "dev"
