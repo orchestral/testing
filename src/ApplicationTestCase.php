@@ -5,6 +5,13 @@ use Orchestra\Foundation\Application;
 abstract class ApplicationTestCase extends TestCase
 {
     /**
+     * Base application namespace.
+     *
+     * @var string
+     */
+    protected $baseNamespace = 'App';
+
+    /**
      * Creates the application.
      *
      * Needs to be implemented by subclasses.
@@ -78,7 +85,7 @@ abstract class ApplicationTestCase extends TestCase
      */
     protected function resolveApplicationConsoleKernel($app)
     {
-        $app->singleton('Illuminate\Contracts\Console\Kernel', 'App\Console\Kernel');
+        $app->singleton('Illuminate\Contracts\Console\Kernel', "{$this->baseNamespace}\Console\Kernel");
     }
 
     /**
@@ -90,7 +97,7 @@ abstract class ApplicationTestCase extends TestCase
      */
     protected function resolveApplicationHttpKernel($app)
     {
-        $app->singleton('Illuminate\Contracts\Http\Kernel', 'App\Http\Kernel');
+        $app->singleton('Illuminate\Contracts\Http\Kernel', "{$this->baseNamespace}\Http\Kernel");
     }
 
     /**
@@ -102,6 +109,6 @@ abstract class ApplicationTestCase extends TestCase
      */
     protected function resolveApplicationExceptionHandler($app)
     {
-        $app->singleton('Illuminate\Contracts\Debug\ExceptionHandler', 'App\Exceptions\Handler');
+        $app->singleton('Illuminate\Contracts\Debug\ExceptionHandler', "{$this->baseNamespace}\Exceptions\Handler");
     }
 }
