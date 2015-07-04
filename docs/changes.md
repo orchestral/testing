@@ -5,6 +5,10 @@ title: Testing Change Log
 
 ## Version 3.1 {#v3-1}
 
+### v3.1.1 {#v3-1-1}
+
+* Update changes to Orchestra Platform v3.1.3.
+
 ### v3.1.0 {#v3-1-0}
 
 * Update support to Orchestra Platform v3.1.
