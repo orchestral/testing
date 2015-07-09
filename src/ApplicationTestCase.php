@@ -12,33 +12,6 @@ abstract class ApplicationTestCase extends TestCase
     protected $baseNamespace = 'App';
 
     /**
-     * Creates the application.
-     *
-     * Needs to be implemented by subclasses.
-     *
-     * @return \Illuminate\Foundation\Application
-     */
-    public function createApplication()
-    {
-        $app = parent::createApplication();
-
-        $bootstraps = [
-            'Orchestra\Foundation\Bootstrap\LoadFoundation',
-            'Orchestra\Foundation\Bootstrap\UserAccessPolicy',
-            'Orchestra\Extension\Bootstrap\LoadExtension',
-            'Orchestra\Foundation\Bootstrap\LoadUserMetaData',
-            'Orchestra\View\Bootstrap\LoadCurrentTheme',
-            'Orchestra\Foundation\Bootstrap\LoadExpresso',
-        ];
-
-        foreach ($bootstraps as $bootstrap) {
-            $app->make($bootstrap)->bootstrap($app);
-        }
-
-        return $app;
-    }
-
-    /**
      * Get application aliases.
      *
      * @param  \Illuminate\Foundation\Application  $app
