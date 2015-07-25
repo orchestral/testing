@@ -19,11 +19,11 @@
         "fzaninotto/faker": "~1.4",
         "mockery/mockery": "0.9.*",
         "phpunit/phpunit": "~4.0",
-        "orchestra/contracts": "3.2.*",
-        "orchestra/testbench": "3.2.*"
+        "orchestra/contracts": "~3.2.0",
+        "orchestra/testbench": "~3.2.0"
     },
     "require-dev": {
-        "orchestra/foundation": "3.2.*"
+        "orchestra/foundation": "~3.2.0"
     },
     "suggest": {
         "orchestra/foundation": "Allow testing extension for Orchestra Platform (~3.2)."
