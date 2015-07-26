@@ -5,6 +5,11 @@ title: Testing Change Log
 
 ## Version 3.1 {#v3-1}
 
+### v3.1.3 {#v3-1-3}
+
+* Bump `orchestra/testbench` minimum version to `v3.1.3`.
+* Update changes to Orchestra Platform v3.1.4.
+
 ### v3.1.2 {#v3-1-2}
 
 * Move `Orchestra\Testing\ApplicationTestCase::createApplication()` to `Orchestra\Testing\TestCase::createApplication()`.
