@@ -188,6 +188,7 @@ return [
         'File'       => Illuminate\Support\Facades\File::class,
         'Form'       => Orchestra\Support\Facades\Form::class,
         'Foundation' => Orchestra\Support\Facades\Foundation::class,
+        'Gate'       => Illuminate\Support\Facades\Gate::class,
         'Hash'       => Illuminate\Support\Facades\Hash::class,
         'HTML'       => Orchestra\Support\Facades\HTML::class,
         'Input'      => Illuminate\Support\Facades\Input::class,
