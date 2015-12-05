@@ -1,3 +1,6 @@
 # Composer
 composer.lock
 vendor/*
+
+# Fixtures
+fixture/resources/config/local/*
