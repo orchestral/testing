@@ -31,6 +31,12 @@ class Kernel extends BaseKernel
             \Illuminate\View\Middleware\ShareErrorsFromSession::class,
         ],
 
+        'orchestra' => [
+            'web',
+            \Orchestra\Foundation\Http\Middleware\LoginAs::class,
+            \Orchestra\Foundation\Http\Middleware\UseBackendTheme::class,
+        ],
+
         'api' => [],
     ];
 }
