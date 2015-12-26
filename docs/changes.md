@@ -3,6 +3,14 @@ title: Testing Change Log
 
 ---
 
+## Version 3.2 {#v3-2}
+
+### v3.2.0 {#v3-2-0}
+
+* Update support to Orchestra Platform v3.2.
+* Remove disabling route filter as it's no longer available.
+* Move `Orchestra\Testing\ApplicationTestCase::createApplication()` to `Orchestra\Testing\TestCase::createApplication()`.
+
 ## Version 3.1 {#v3-1}
 
 ### v3.1.4 {#v3-1-4}
