@@ -1,4 +1,6 @@
-<?php namespace Orchestra\Testing\Http;
+<?php
+
+namespace Orchestra\Testing\Http;
 
 use Orchestra\Testbench\Http\Kernel as BaseKernel;
 

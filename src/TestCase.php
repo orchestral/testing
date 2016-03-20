@@ -1,4 +1,6 @@
-<?php namespace Orchestra\Testing;
+<?php
+
+namespace Orchestra\Testing;
 
 use Orchestra\Foundation\Application;
 use Orchestra\Testbench\TestCase as TestbenchTestCase;
