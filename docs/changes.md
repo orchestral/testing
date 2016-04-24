@@ -5,6 +5,11 @@ title: Testing Change Log
 
 ## Version 3.2 {#v3-2}
 
+### v3.2.2 {#v3-2-2}
+
+* Update changes to Orchestra Platform v3.2.5.
+* Add `Orchestra\Testing\TestCase::makeInstaller()`.
+
 ### v3.2.1 {#v3-2-1}
 
 * Update changes to Orchestra Platform v3.2.2.

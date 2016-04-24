@@ -116,7 +116,7 @@ abstract class TestCase extends TestbenchTestCase
         $app->singleton('Illuminate\Contracts\Http\Kernel', 'Orchestra\Testing\Http\Kernel');
     }
 
-        /**
+    /**
      * Make Orchestra Platform installer.
      *
      * @return \Orchestra\Installation\Installation
