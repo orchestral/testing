@@ -129,6 +129,10 @@ abstract class TestCase extends TestbenchTestCase
         $installer->bootInstallerFilesForTesting();
         $installer->migrate();
 
+        $this->beforeApplicationDestroyed(function () {
+            $this->artisan('migrate:rollback');
+        });
+
         return $installer;
     }
 }
