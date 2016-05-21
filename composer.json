@@ -17,8 +17,9 @@
     "require": {
         "php": ">=5.5.0",
         "fzaninotto/faker": "~1.4",
-        "mockery/mockery": "0.9.*",
-        "phpunit/phpunit": "~4.0|~5.0",
+        "mockery/mockery": "^0.9.4",
+        "phpunit/phpunit": "~4.8|~5.0",
+        "doctrine/dbal": "~2.5",
         "orchestra/contracts": "~3.2.0",
         "orchestra/installer": "~3.2.2",
         "orchestra/testbench": "~3.2.0"
