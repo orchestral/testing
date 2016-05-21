@@ -5,6 +5,12 @@ title: Testing Change Log
 
 ## Version 3.2 {#v3-2}
 
+### v3.2.3 {#v3-2-3}
+
+* Import missing `Orchestra\Installation\Installation`.
+* Run `migrate:rollback` on test `tearDown()` method.
+* Add `doctrine/dbal` as a dependency.
+
 ### v3.2.2 {#v3-2-2}
 
 * Update changes to Orchestra Platform v3.2.5.
