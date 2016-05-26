@@ -20,19 +20,19 @@
         "mockery/mockery": "^0.9.4",
         "phpunit/phpunit": "~4.8|~5.0",
         "doctrine/dbal": "~2.5",
-        "orchestra/contracts": "~3.3.0",
-        "orchestra/installer": "~3.3.0",
-        "orchestra/testbench": "~3.3.0"
+        "orchestra/contracts": "~3.4.0",
+        "orchestra/installer": "~3.4.0",
+        "orchestra/testbench": "~3.4.0"
     },
     "require-dev": {
-        "orchestra/foundation": "~3.3.0"
+        "orchestra/foundation": "~3.4.0"
     },
     "suggest": {
-        "orchestra/foundation": "Allow testing extension for Orchestra Platform (~3.3)."
+        "orchestra/foundation": "Allow testing extension for Orchestra Platform (~3.4)."
     },
     "extra": {
         "branch-alias": {
-            "dev-master": "3.3-dev"
+            "dev-master": "3.4-dev"
         }
     },
     "minimum-stability": "dev"
