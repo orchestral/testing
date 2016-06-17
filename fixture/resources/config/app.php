@@ -169,19 +169,6 @@ return [
         Orchestra\Foundation\Providers\FoundationServiceProvider::class,
         Orchestra\Foundation\Providers\RouteServiceProvider::class,
 
-        /*
-         * Orchestra Platform Optional Service Providers...
-         */
-        Orchestra\Installation\InstallerServiceProvider::class,
-
-        /*
-         * Application Service Providers...
-         */
-        App\Providers\AppServiceProvider::class,
-        App\Providers\AuthServiceProvider::class,
-        App\Providers\EventServiceProvider::class,
-        App\Providers\ExtensionServiceProvider::class,
-        App\Providers\RouteServiceProvider::class,
     ],
 
     /*
