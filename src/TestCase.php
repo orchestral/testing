@@ -2,6 +2,7 @@
 
 namespace Orchestra\Testing;
 
+use Illuminate\Support\Arr;
 use Orchestra\Foundation\Auth\User;
 use Orchestra\Foundation\Application;
 use Orchestra\Installation\Installation;
