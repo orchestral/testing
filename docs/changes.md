@@ -3,6 +3,13 @@ title: Testing Change Log
 
 ---
 
+## Version 3.3 {#v3-3}
+
+### v3.3.0 {#v3-3-0}
+
+* Update support to Orchestra Platform v3.3.
+* Add `Orchestra\Testing\TestCase::install()` helper method.
+
 ## Version 3.2 {#v3-2}
 
 ### v3.2.3 {#v3-2-3}
