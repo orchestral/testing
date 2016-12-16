@@ -22,13 +22,14 @@
         "doctrine/dbal": "~2.5",
         "orchestra/avatar": "~3.3.0",
         "orchestra/contracts": "~3.3.0",
-        "orchestra/installer": "~3.3.0",
         "orchestra/testbench": "~3.3.0"
     },
     "require-dev": {
+        "orchestra/installer": "~3.3.0",
         "orchestra/foundation": "~3.3.0"
     },
     "suggest": {
+        "orchestra/installer": "Allow testing with installed Orchestra Platform (~3.3).",
         "orchestra/foundation": "Allow testing extension for Orchestra Platform (~3.3)."
     },
     "extra": {
