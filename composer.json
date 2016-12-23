@@ -22,7 +22,8 @@
         "doctrine/dbal": "~2.5",
         "orchestra/avatar": "~3.4.0",
         "orchestra/contracts": "~3.4.0",
-        "orchestra/testbench": "~3.4.0"
+        "orchestra/testbench": "~3.4.0",
+        "orchestra/testbench-browser-kit": "~3.4.0"
     },
     "require-dev": {
         "orchestra/installer": "~3.4.0",
