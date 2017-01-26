@@ -179,6 +179,6 @@ abstract class TestCase extends TestbenchTestCase
      */
     protected function createAdminUser()
     {
-        return factory(User::class)->create();
+        return factory(User::class)->create()->first();
     }
 }
