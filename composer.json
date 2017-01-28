@@ -16,23 +16,26 @@
     },
     "require": {
         "php": ">=7.0",
+        "doctrine/dbal": "~2.5",
         "fzaninotto/faker": "~1.4",
         "mockery/mockery": "^0.9.4",
-        "phpunit/phpunit": "~5.7",
-        "doctrine/dbal": "~2.5",
         "orchestra/avatar": "~3.5.0",
         "orchestra/contracts": "~3.5.0",
         "orchestra/testbench": "~3.5.0",
-        "orchestra/testbench-browser-kit": "~3.5.0"
+        "orchestra/testbench-browser-kit": "~3.5.0",
+        "phpunit/phpunit": "~5.7"
     },
     "require-dev": {
-        "orchestra/installer": "~3.5.0",
-        "orchestra/foundation": "~3.5.0"
+        "orchestra/foundation": "~3.5.0",
+        "orchestra/installer": "~3.5.0"
     },
     "extra": {
         "branch-alias": {
             "dev-master": "3.5-dev"
         }
+    },
+    "config": {
+        "sort-packages": true
     },
     "minimum-stability": "dev"
 }
