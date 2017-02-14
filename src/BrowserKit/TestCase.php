@@ -167,6 +167,7 @@ abstract class TestCase extends TestbenchTestCase
 
         $this->beforeApplicationDestroyed(function () {
             $this->app['orchestra.installed'] = false;
+            $this->artisan('migrate:rollback');
         });
 
         return $user;
