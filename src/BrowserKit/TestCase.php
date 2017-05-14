@@ -93,7 +93,7 @@ abstract class TestCase extends TestbenchTestCase
      */
     protected function getBasePath()
     {
-        return __DIR__.'/../../fixture';
+        return __DIR__.'/../../platform';
     }
 
     /**
