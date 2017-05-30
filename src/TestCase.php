@@ -93,7 +93,7 @@ abstract class TestCase extends TestbenchTestCase
      */
     protected function getBasePath()
     {
-        return __DIR__.'/../fixture';
+        return __DIR__.'/../platform';
     }
 
     /**
@@ -167,6 +167,7 @@ abstract class TestCase extends TestbenchTestCase
 
         $this->beforeApplicationDestroyed(function () {
             $this->app['orchestra.installed'] = false;
+            $this->artisan('migrate:rollback');
         });
 
         return $user;
