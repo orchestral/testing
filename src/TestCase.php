@@ -2,40 +2,12 @@
 
 namespace Orchestra\Testing;
 
-use Orchestra\Foundation\Auth\User;
 use Orchestra\Foundation\Application;
-use Orchestra\Installation\Installation;
 use Orchestra\Testbench\TestCase as TestbenchTestCase;
-use Orchestra\Contracts\Installation\Installation as InstallationContract;
 
 abstract class TestCase extends TestbenchTestCase
 {
-    /**
-     * Creates the application.
-     *
-     * Needs to be implemented by subclasses.
-     *
-     * @return \Illuminate\Foundation\Application
-     */
-    public function createApplication()
-    {
-        $app = parent::createApplication();
-
-        $bootstraps = [
-            'Orchestra\Foundation\Bootstrap\LoadFoundation',
-            'Orchestra\Foundation\Bootstrap\UserAccessPolicy',
-            'Orchestra\Extension\Bootstrap\LoadExtension',
-            'Orchestra\Foundation\Bootstrap\LoadUserMetaData',
-            'Orchestra\View\Bootstrap\LoadCurrentTheme',
-            'Orchestra\Foundation\Bootstrap\LoadExpresso',
-        ];
-
-        foreach ($bootstraps as $bootstrap) {
-            $app->make($bootstrap)->bootstrap($app);
-        }
-
-        return $app;
-    }
+    use Traits\WithInstallation;
 
     /**
      * Override application bindings.
@@ -48,6 +20,25 @@ abstract class TestCase extends TestbenchTestCase
     {
         return [
             'Illuminate\Foundation\Bootstrap\LoadConfiguration' => 'Orchestra\Config\Bootstrap\LoadConfiguration',
+        ];
+    }
+
+    /**
+     * Get package bootstrapper.
+     *
+     * @param  \Illuminate\Foundation\Application  $app
+     *
+     * @return array
+     */
+    protected function getPackageBootstrappers($app)
+    {
+        return [
+            'Orchestra\Foundation\Bootstrap\LoadFoundation',
+            'Orchestra\Foundation\Bootstrap\UserAccessPolicy',
+            'Orchestra\Extension\Bootstrap\LoadExtension',
+            'Orchestra\Foundation\Bootstrap\LoadUserMetaData',
+            'Orchestra\View\Bootstrap\LoadCurrentTheme',
+            'Orchestra\Foundation\Bootstrap\LoadExpresso',
         ];
     }
 
@@ -93,68 +84,5 @@ abstract class TestCase extends TestbenchTestCase
     protected function resolveApplicationHttpKernel($app)
     {
         $app->singleton('Illuminate\Contracts\Http\Kernel', 'Orchestra\Testing\Http\Kernel');
-    }
-
-    /**
-     * Make Orchestra Platform installer.
-     *
-     * @return \Orchestra\Installation\Installation
-     */
-    protected function makeInstaller()
-    {
-        $installer = new Installation($this->app);
-
-        $installer->bootInstallerFilesForTesting();
-        $installer->migrate();
-
-        $this->beforeApplicationDestroyed(function () {
-            $this->artisan('migrate:rollback');
-        });
-
-        return $installer;
-    }
-
-    /**
-     * Install Orchestra Platform and get the administrator user.
-     *
-     * @param  string  $class
-     * @param  \Orchestra\Contracts\Installation\Installation|null  $installer
-     * @param  array  $config
-     *
-     * @return \Orchestra\Foundation\Auth\User
-     */
-    protected function install(InstallationContract $installer = null, array $config = [])
-    {
-        if (is_null($installer)) {
-            $installer = $this->makeInstaller();
-        }
-
-        $user = $this->createAdminUser();
-
-        $installer->create($user, [
-            'site_name' => $config['name'] ?? 'Orchestra Platform',
-            'email'     => $config['email'] ?? 'hello@orchestraplatform.com',
-        ]);
-
-        $this->artisan('migrate');
-
-        $this->app['orchestra.installed'] = true;
-
-        $this->beforeApplicationDestroyed(function () {
-            $this->app['orchestra.installed'] = false;
-            $this->artisan('migrate:rollback');
-        });
-
-        return $user;
-    }
-
-    /**
-     * Create admin user.
-     *
-     * @return \Orchestra\Foundation\Auth\User
-     */
-    protected function createAdminUser()
-    {
-        return factory(User::class)->create();
     }
 }
