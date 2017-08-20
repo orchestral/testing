@@ -79,6 +79,16 @@ abstract class TestCase extends TestbenchTestCase
     /**
      * Resolve application implementation.
      *
+     * @return \Illuminate\Foundation\Application
+     */
+    protected function resolveApplication()
+    {
+        return new Application($this->getBasePath());
+    }
+
+    /**
+     * Resolve application implementation.
+     *
      * @param \Illuminate\Foundation\Application  $app
      */
     protected function resolveApplicationHttpKernel($app)
