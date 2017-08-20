@@ -3,9 +3,6 @@
 $finder = Symfony\Component\Finder\Finder::create()
     ->files()
     ->in(__DIR__.'/src')
-    ->in(__DIR__.'/fixture/resources/config')
-    ->in(__DIR__.'/fixture/resources/database')
-    ->in(__DIR__.'/fixture/resources/lang')
     ->ignoreDotFiles(true)
     ->ignoreVCS(true);
 

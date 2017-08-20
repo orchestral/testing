@@ -2,7 +2,6 @@
 
 namespace Orchestra\Testing;
 
-use Illuminate\Support\Arr;
 use Orchestra\Foundation\Auth\User;
 use Orchestra\Foundation\Application;
 use Orchestra\Installation\Installation;
@@ -51,18 +50,6 @@ abstract class TestCase extends TestbenchTestCase
     }
 
     /**
-     * Get package aliases.
-     *
-     * @param  \Illuminate\Foundation\Application  $app
-     *
-     * @return array
-     */
-    protected function getPackageAliases($app)
-    {
-        return [];
-    }
-
-    /**
      * Get application providers.
      *
      * @param  \Illuminate\Foundation\Application  $app
@@ -72,18 +59,6 @@ abstract class TestCase extends TestbenchTestCase
     protected function getApplicationProviders($app)
     {
         return $app['config']['app.providers'];
-    }
-
-    /**
-     * Get package providers.
-     *
-     * @param  \Illuminate\Foundation\Application  $app
-     *
-     * @return array
-     */
-    protected function getPackageProviders($app)
-    {
-        return [];
     }
 
     /**
@@ -157,8 +132,8 @@ abstract class TestCase extends TestbenchTestCase
         $user = $this->createAdminUser();
 
         $installer->create($user, [
-            'site_name' => Arr::get($config, 'name', 'Orchestra Platform'),
-            'email'     => Arr::get($config, 'email', 'hello@orchestraplatform.com'),
+            'site_name' => $config['name'] ?? 'Orchestra Platform',
+            'email'     => $config['email'] ?? 'hello@orchestraplatform.com',
         ]);
 
         $this->artisan('migrate');
