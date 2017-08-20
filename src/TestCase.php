@@ -38,6 +38,20 @@ abstract class TestCase extends TestbenchTestCase
     }
 
     /**
+     * Override application bindings.
+     *
+     * @param  \Illuminate\Foundation\Application  $app
+     *
+     * @return array
+     */
+    protected function overrideApplicationBindings($app)
+    {
+        return [
+            'Illuminate\Foundation\Bootstrap\LoadConfiguration' => 'Orchestra\Config\Bootstrap\LoadConfiguration',
+        ];
+    }
+
+    /**
      * Get application aliases.
      *
      * @param  \Illuminate\Foundation\Application  $app
@@ -69,20 +83,6 @@ abstract class TestCase extends TestbenchTestCase
     protected function getBasePath()
     {
         return __DIR__.'/../platform';
-    }
-
-    /**
-     * Resolve application implementation.
-     *
-     * @return \Illuminate\Foundation\Application
-     */
-    protected function resolveApplication()
-    {
-        $app = new Application($this->getBasePath());
-
-        $app->bind('Illuminate\Foundation\Bootstrap\LoadConfiguration', 'Orchestra\Config\Bootstrap\LoadConfiguration');
-
-        return $app;
     }
 
     /**
