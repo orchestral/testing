@@ -12,17 +12,29 @@ use Orchestra\Contracts\Installation\Installation as InstallationContract;
 abstract class TestCase extends TestbenchTestCase
 {
     /**
-     * Creates the application.
+     * Override application bindings.
      *
-     * Needs to be implemented by subclasses.
+     * @param  \Illuminate\Foundation\Application  $app
      *
-     * @return \Illuminate\Foundation\Application
+     * @return array
      */
-    public function createApplication()
+    protected function overrideApplicationBindings($app)
     {
-        $app = parent::createApplication();
+        return [
+            'Illuminate\Foundation\Bootstrap\LoadConfiguration' => 'Orchestra\Config\Bootstrap\LoadConfiguration',
+        ];
+    }
 
-        $bootstraps = [
+    /**
+     * Get package bootstrapper.
+     *
+     * @param  \Illuminate\Foundation\Application  $app
+     *
+     * @return array
+     */
+    protected function getPackageBootstrappers($app)
+    {
+        return [
             'Orchestra\Foundation\Bootstrap\LoadFoundation',
             'Orchestra\Foundation\Bootstrap\UserAccessPolicy',
             'Orchestra\Extension\Bootstrap\LoadExtension',
@@ -30,12 +42,6 @@ abstract class TestCase extends TestbenchTestCase
             'Orchestra\View\Bootstrap\LoadCurrentTheme',
             'Orchestra\Foundation\Bootstrap\LoadExpresso',
         ];
-
-        foreach ($bootstraps as $bootstrap) {
-            $app->make($bootstrap)->bootstrap($app);
-        }
-
-        return $app;
     }
 
     /**
@@ -103,11 +109,7 @@ abstract class TestCase extends TestbenchTestCase
      */
     protected function resolveApplication()
     {
-        $app = new Application($this->getBasePath());
-
-        $app->bind('Illuminate\Foundation\Bootstrap\LoadConfiguration', 'Orchestra\Config\Bootstrap\LoadConfiguration');
-
-        return $app;
+        return new Application($this->getBasePath());
     }
 
     /**
