@@ -18,7 +18,12 @@ class Kernel extends BaseKernel
      *
      * @var array
      */
-    protected $middleware = [];
+    protected $middleware = [
+        \Illuminate\Foundation\Http\Middleware\ValidatePostSize::class,
+        \Orchestra\Testbench\Http\Middleware\TrimStrings::class,
+        \Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull::class,
+
+    ];
 
     /**
      * The application's route middleware groups.
