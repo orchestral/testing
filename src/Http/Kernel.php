@@ -22,7 +22,7 @@ class Kernel extends BaseKernel
         \Illuminate\Foundation\Http\Middleware\ValidatePostSize::class,
         \Orchestra\Testbench\Http\Middleware\TrimStrings::class,
         \Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull::class,
-
+        // \Orchestra\Testbench\Http\Middleware\TrustProxies::class,
     ];
 
     /**
@@ -35,7 +35,10 @@ class Kernel extends BaseKernel
             \Illuminate\Cookie\Middleware\EncryptCookies::class,
             \Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse::class,
             \Illuminate\Session\Middleware\StartSession::class,
+            // \Illuminate\Session\Middleware\AuthenticateSession::class,
             \Illuminate\View\Middleware\ShareErrorsFromSession::class,
+            \Orchestra\Testbench\Http\Middleware\VerifyCsrfToken::class,
+            \Illuminate\Routing\Middleware\SubstituteBindings::class,
         ],
 
         'orchestra' => [
