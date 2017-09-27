@@ -41,14 +41,14 @@ trait WithInstallation
             $installer = $this->makeInstaller();
         }
 
+        $this->artisan('migrate');
+
         $user = $this->createAdminUser();
 
         $installer->create($user, [
             'site_name' => Arr::get($config, 'name', 'Orchestra Platform'),
             'email' => Arr::get($config, 'email', 'hello@orchestraplatform.com'),
         ]);
-
-        $this->artisan('migrate');
 
         $this->app['orchestra.installed'] = true;
 
