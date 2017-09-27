@@ -120,7 +120,6 @@ abstract class TestCase extends TestbenchTestCase
         $app->singleton('Illuminate\Contracts\Http\Kernel', 'Orchestra\Testing\Http\Kernel');
     }
 
-
     /**
      * Create admin user.
      *
