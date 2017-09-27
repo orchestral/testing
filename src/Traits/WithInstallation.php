@@ -3,7 +3,6 @@
 namespace Orchestra\Testing\Traits;
 
 use Illuminate\Support\Arr;
-use Orchestra\Foundation\Auth\User;
 use Orchestra\Installation\Installation;
 use Orchestra\Contracts\Installation\Installation as InstallationContract;
 
@@ -66,8 +65,5 @@ trait WithInstallation
      *
      * @return \Orchestra\Foundation\Auth\User
      */
-    protected function createAdminUser()
-    {
-        return factory(User::class)->create();
-    }
+    abstract protected function createAdminUser();
 }
