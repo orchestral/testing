@@ -32,10 +32,11 @@ trait WithInstallation
      * Install Orchestra Platform and get the administrator user.
      *
      * @param  \Orchestra\Contracts\Installation\Installation|null  $installer
+     * @param  array  $config
      *
      * @return \Orchestra\Foundation\Auth\User
      */
-    protected function install(InstallationContract $installer = null)
+    protected function install(InstallationContract $installer = null, array $config = [])
     {
         if (is_null($installer)) {
             $installer = $this->makeInstaller();
