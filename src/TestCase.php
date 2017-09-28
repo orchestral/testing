@@ -2,8 +2,10 @@
 
 namespace Orchestra\Testing;
 
+use Orchestra\Foundation\Auth\User;
 use Orchestra\Foundation\Application;
 use Orchestra\Testbench\TestCase as TestbenchTestCase;
+use Orchestra\Foundation\Testing\Traits\WithInstallation;
 
 abstract class TestCase extends TestbenchTestCase
 {
@@ -94,5 +96,15 @@ abstract class TestCase extends TestbenchTestCase
     protected function resolveApplicationHttpKernel($app)
     {
         $app->singleton('Illuminate\Contracts\Http\Kernel', 'Orchestra\Testing\Http\Kernel');
+    }
+
+    /**
+     * Create admin user.
+     *
+     * @return \Orchestra\Foundation\Auth\User
+     */
+    protected function createAdminUser()
+    {
+        return factory(User::class)->create();
     }
 }
