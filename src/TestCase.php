@@ -5,10 +5,12 @@ namespace Orchestra\Testing;
 use Orchestra\Foundation\Auth\User;
 use Orchestra\Foundation\Application;
 use Orchestra\Testbench\TestCase as TestbenchTestCase;
-use Orchestra\Foundation\Testing\Traits\WithInstallation;
+use Orchestra\Foundation\Testing\Concerns\WithInstallation;
 
 abstract class TestCase extends TestbenchTestCase
 {
+    use WithInstallation;
+
     /**
      * Creates the application.
      *

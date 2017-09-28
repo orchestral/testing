@@ -4,7 +4,7 @@ namespace Orchestra\Testing\BrowserKit;
 
 use Orchestra\Foundation\Auth\User;
 use Orchestra\Foundation\Application;
-use Orchestra\Foundation\Testing\Traits\WithInstallation;
+use Orchestra\Foundation\Testing\Concerns\WithInstallation;
 use Orchestra\Testbench\BrowserKit\TestCase as TestbenchTestCase;
 
 abstract class TestCase extends TestbenchTestCase
