@@ -19,19 +19,19 @@
         "doctrine/dbal": "~2.5",
         "fzaninotto/faker": "~1.4",
         "mockery/mockery": "^0.9.4",
-        "orchestra/avatar": "~3.5.0",
-        "orchestra/contracts": "~3.5.0",
-        "orchestra/testbench": "~3.5.0",
-        "orchestra/testbench-browser-kit": "~3.5.0",
+        "orchestra/avatar": "~3.6.0",
+        "orchestra/contracts": "~3.6.0",
+        "orchestra/testbench": "~3.6.0",
+        "orchestra/testbench-browser-kit": "~3.6.0",
         "phpunit/phpunit": "~6.0"
     },
     "require-dev": {
-        "orchestra/foundation": "~3.5.0",
-        "orchestra/installer": "~3.5.0"
+        "orchestra/installer": "~3.6.0",
+        "orchestra/foundation": "~3.6.0"
     },
     "extra": {
         "branch-alias": {
-            "dev-master": "3.5-dev"
+            "dev-master": "3.6-dev"
         }
     },
     "config": {
