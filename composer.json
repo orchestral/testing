@@ -21,8 +21,8 @@
         "mockery/mockery": "^0.9.4",
         "orchestra/avatar": "~3.4.0",
         "orchestra/contracts": "~3.4.0",
-        "orchestra/testbench": "~3.4.0",
-        "orchestra/testbench-browser-kit": "~3.4.0",
+        "orchestra/testbench": "~3.4.5",
+        "orchestra/testbench-browser-kit": "~3.4.1",
         "phpunit/phpunit": "~5.7"
     },
     "require-dev": {
