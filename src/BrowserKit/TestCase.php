@@ -4,6 +4,7 @@ namespace Orchestra\Testing\BrowserKit;
 
 use Orchestra\Foundation\Auth\User;
 use Orchestra\Foundation\Application;
+use Orchestra\Foundation\Testing\Installation;
 use Orchestra\Foundation\Testing\Concerns\WithInstallation;
 use Orchestra\Testbench\BrowserKit\TestCase as TestbenchTestCase;
 
@@ -118,6 +119,22 @@ abstract class TestCase extends TestbenchTestCase
     protected function resolveApplicationHttpKernel($app)
     {
         $app->singleton('Illuminate\Contracts\Http\Kernel', 'Orchestra\Testing\Http\Kernel');
+    }
+
+    /**
+     * Boot the testing helper traits.
+     *
+     * @return array
+     */
+    protected function setUpTraits()
+    {
+        $uses = parent::setUpTraits();
+
+        if (isset($uses[Installation::class])) {
+            $this->beginInstallation();
+        }
+
+        return $uses;
     }
 
     /**
