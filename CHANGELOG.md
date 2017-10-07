@@ -2,6 +2,22 @@
 
 This changelog references the relevant changes (bug and security fixes) done to `orchestra/testing`.
 
+## 3.4.2
+
+Released: 2017-10-07
+
+### Changes
+
+* Utilize `getPackageBootstrappers()` which is available with Testbench Core v3.4.3.
+
+## 3.4.1
+
+Released: 2017-09-28
+
+### Changes
+
+* Uses `Orchestra\Foundation\Testing\Concerns\WithInstallation`.
+
 ## 3.4.0
 
 Released: 2017-05-30
