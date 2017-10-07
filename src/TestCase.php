@@ -13,17 +13,15 @@ abstract class TestCase extends TestbenchTestCase
     use WithInstallation;
 
     /**
-     * Creates the application.
+     * Get package bootstrapper.
      *
-     * Needs to be implemented by subclasses.
+     * @param  \Illuminate\Foundation\Application  $app
      *
-     * @return \Illuminate\Foundation\Application
+     * @return array
      */
-    public function createApplication()
+    protected function getPackageBootstrappers($app)
     {
-        $app = parent::createApplication();
-
-        $bootstraps = [
+        return [
             'Orchestra\Foundation\Bootstrap\LoadFoundation',
             'Orchestra\Foundation\Bootstrap\UserAccessPolicy',
             'Orchestra\Extension\Bootstrap\LoadExtension',
@@ -31,12 +29,6 @@ abstract class TestCase extends TestbenchTestCase
             'Orchestra\View\Bootstrap\LoadCurrentTheme',
             'Orchestra\Foundation\Bootstrap\LoadExpresso',
         ];
-
-        foreach ($bootstraps as $bootstrap) {
-            $app->make($bootstrap)->bootstrap($app);
-        }
-
-        return $app;
     }
 
     /**

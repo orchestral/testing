@@ -38,20 +38,6 @@ abstract class ApplicationTestCase extends TestCase
     }
 
     /**
-     * Resolve application implementation.
-     *
-     * @return \Illuminate\Foundation\Application
-     */
-    protected function resolveApplication()
-    {
-        $app = new Application($this->getBasePath());
-
-        $app->singleton('Illuminate\Foundation\Bootstrap\LoadConfiguration', 'Orchestra\Config\Bootstrap\LoadConfiguration');
-
-        return $app;
-    }
-
-    /**
      * Resolve application Console Kernel implementation.
      *
      * @param  \Illuminate\Foundation\Application  $app
