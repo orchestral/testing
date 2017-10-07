@@ -14,6 +14,18 @@ abstract class ApplicationTestCase extends TestCase
     protected $baseNamespace = 'App';
 
     /**
+     * Get package bootstrapper.
+     *
+     * @param  \Illuminate\Foundation\Application  $app
+     *
+     * @return array
+     */
+    protected function getPackageBootstrappers($app)
+    {
+        return [];
+    }
+
+    /**
      * Get application aliases.
      *
      * @param  \Illuminate\Foundation\Application  $app

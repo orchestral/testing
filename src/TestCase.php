@@ -13,20 +13,6 @@ abstract class TestCase extends TestbenchTestCase
     use WithInstallation;
 
     /**
-     * Override application bindings.
-     *
-     * @param  \Illuminate\Foundation\Application  $app
-     *
-     * @return array
-     */
-    protected function overrideApplicationBindings($app)
-    {
-        return [
-            'Illuminate\Foundation\Bootstrap\LoadConfiguration' => 'Orchestra\Config\Bootstrap\LoadConfiguration',
-        ];
-    }
-
-    /**
      * Get package bootstrapper.
      *
      * @param  \Illuminate\Foundation\Application  $app
@@ -58,6 +44,18 @@ abstract class TestCase extends TestbenchTestCase
     }
 
     /**
+     * Get package aliases.
+     *
+     * @param  \Illuminate\Foundation\Application  $app
+     *
+     * @return array
+     */
+    protected function getPackageAliases($app)
+    {
+        return [];
+    }
+
+    /**
      * Get application providers.
      *
      * @param  \Illuminate\Foundation\Application  $app
@@ -67,6 +65,18 @@ abstract class TestCase extends TestbenchTestCase
     protected function getApplicationProviders($app)
     {
         return $app['config']['app.providers'];
+    }
+
+    /**
+     * Get package providers.
+     *
+     * @param  \Illuminate\Foundation\Application  $app
+     *
+     * @return array
+     */
+    protected function getPackageProviders($app)
+    {
+        return [];
     }
 
     /**
@@ -86,7 +96,11 @@ abstract class TestCase extends TestbenchTestCase
      */
     protected function resolveApplication()
     {
-        return new Application($this->getBasePath());
+        $app = new Application($this->getBasePath());
+
+        $app->bind('Illuminate\Foundation\Bootstrap\LoadConfiguration', 'Orchestra\Config\Bootstrap\LoadConfiguration');
+
+        return $app;
     }
 
     /**

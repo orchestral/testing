@@ -22,6 +22,7 @@
         "orchestra/avatar": "~3.5.0",
         "orchestra/contracts": "~3.5.0",
         "orchestra/testbench": "~3.5.1",
+        "orchestra/testbench-core": "~3.5.3",
         "orchestra/testbench-browser-kit": "~3.5.2",
         "phpunit/phpunit": "~6.0"
     },
