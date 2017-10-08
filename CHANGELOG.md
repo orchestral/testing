@@ -2,6 +2,20 @@
 
 This changelog references the relevant changes (bug and security fixes) done to `orchestra/testing`.
 
+## 3.4.3
+
+Released: 2017-10-08
+
+### Added
+
+* Added `Orchestra\Foundation\Bootstrap\LoadAuthen`.
+
+### Changes
+
+* Bump minimum dependencies:
+    - Foundation to `3.4.3`.
+    - Testbench to `3.4.10`.
+
 ## 3.4.2
 
 Released: 2017-10-07
