@@ -22,7 +22,6 @@ abstract class TestCase extends TestbenchTestCase
     protected function getPackageBootstrappers($app)
     {
         return [
-            'Orchestra\Foundation\Bootstrap\LoadAuthen',
             'Orchestra\Foundation\Bootstrap\LoadFoundation',
             'Orchestra\Foundation\Bootstrap\UserAccessPolicy',
             'Orchestra\Extension\Bootstrap\LoadExtension',
