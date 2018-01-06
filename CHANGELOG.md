@@ -6,10 +6,6 @@ This changelog references the relevant changes (bug and security fixes) done to 
 
 Released: 2017-12-26
 
-### Added
-
-* Added `Orchestra\Testing\Traits\WithInstallation`.
-
 ### Changes
 
 * Update support for Laravel Framework v5.5.
