@@ -106,7 +106,9 @@ abstract class TestCase extends TestbenchTestCase
     /**
      * Resolve application implementation.
      *
-     * @param \Illuminate\Foundation\Application  $app
+     * @param  \Illuminate\Foundation\Application  $app
+     *
+     * @return void
      */
     protected function resolveApplicationHttpKernel($app)
     {

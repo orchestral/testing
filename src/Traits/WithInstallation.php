@@ -46,7 +46,7 @@ trait WithInstallation
 
         $installer->create($user, [
             'site_name' => $config['name'] ?? 'Orchestra Platform',
-            'email'     => $config['email'] ?? 'hello@orchestraplatform.com',
+            'email' => $config['email'] ?? 'hello@orchestraplatform.com',
         ]);
 
         $this->artisan('migrate');
