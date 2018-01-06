@@ -5,10 +5,10 @@ namespace Orchestra\Testing;
 use Orchestra\Foundation\Auth\User;
 use Orchestra\Foundation\Application;
 use Orchestra\Foundation\Testing\Installation;
-use Orchestra\Testbench\TestCase as TestbenchTestCase;
+use Orchestra\Testbench\TestCase as Testbench;
 use Orchestra\Foundation\Testing\Concerns\WithInstallation;
 
-abstract class TestCase extends TestbenchTestCase
+abstract class TestCase extends Testbench
 {
     use WithInstallation;
 
@@ -44,18 +44,6 @@ abstract class TestCase extends TestbenchTestCase
     }
 
     /**
-     * Get package aliases.
-     *
-     * @param  \Illuminate\Foundation\Application  $app
-     *
-     * @return array
-     */
-    protected function getPackageAliases($app)
-    {
-        return [];
-    }
-
-    /**
      * Get application providers.
      *
      * @param  \Illuminate\Foundation\Application  $app
@@ -65,18 +53,6 @@ abstract class TestCase extends TestbenchTestCase
     protected function getApplicationProviders($app)
     {
         return $app['config']['app.providers'];
-    }
-
-    /**
-     * Get package providers.
-     *
-     * @param  \Illuminate\Foundation\Application  $app
-     *
-     * @return array
-     */
-    protected function getPackageProviders($app)
-    {
-        return [];
     }
 
     /**
@@ -106,7 +82,9 @@ abstract class TestCase extends TestbenchTestCase
     /**
      * Resolve application implementation.
      *
-     * @param \Illuminate\Foundation\Application  $app
+     * @param  \Illuminate\Foundation\Application  $app
+     *
+     * @return void
      */
     protected function resolveApplicationHttpKernel($app)
     {
