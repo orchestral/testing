@@ -2,6 +2,14 @@
 
 This changelog references the relevant changes (bug and security fixes) done to `orchestra/testing`.
 
+## 3.5.1
+
+Released: 2018-01-19
+
+### Removed
+
+* Remove unused code.
+
 ## 3.5.0
 
 Released: 2017-12-26
