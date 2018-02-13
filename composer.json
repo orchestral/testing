@@ -23,8 +23,7 @@
         "orchestra/contracts": "~3.6.0",
         "orchestra/testbench": "~3.6.0",
         "orchestra/testbench-core": "~3.6.0",
-        "orchestra/testbench-browser-kit": "~3.6.0",
-        "phpunit/phpunit": "~7.0"
+        "orchestra/testbench-browser-kit": "~3.6.0"
     },
     "require-dev": {
         "orchestra/installer": "~3.6.0",
