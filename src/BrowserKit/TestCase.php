@@ -96,11 +96,13 @@ abstract class TestCase extends Testbench
      */
     protected function setUpTraits()
     {
-        $uses = parent::setUpTraits();
+        $uses = array_flip(class_uses_recursive(static::class));
 
         if (isset($uses[Installation::class])) {
             $this->beginInstallation();
         }
+
+        $uses = parent::setUpTraits();
 
         return $uses;
     }
