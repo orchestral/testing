@@ -104,7 +104,7 @@ abstract class TestCase extends Testbench
             $this->beginInstallation();
         }
 
-        $uses = parent::setUpTraits();
+        return parent::setUpTraits();
     }
 
     /**
