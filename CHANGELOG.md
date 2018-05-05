@@ -2,6 +2,14 @@
 
 This changelog references the relevant changes (bug and security fixes) done to `orchestra/testing`.
 
+## 3.5.2
+
+Released: 2018-02-28
+
+### Changes
+
+* Simplify dependencies constraint.
+
 ## 3.5.1
 
 Released: 2018-01-19
