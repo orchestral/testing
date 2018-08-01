@@ -38,15 +38,35 @@ class Kernel extends BaseKernel
             // \Illuminate\Session\Middleware\AuthenticateSession::class,
             \Illuminate\View\Middleware\ShareErrorsFromSession::class,
             \Orchestra\Testbench\Http\Middleware\VerifyCsrfToken::class,
-            \Illuminate\Routing\Middleware\SubstituteBindings::class,
+           'bindings',
         ],
 
         'orchestra' => [
             'web',
+            'backend',
             \Orchestra\Foundation\Http\Middleware\LoginAs::class,
-            \Orchestra\Foundation\Http\Middleware\UseBackendTheme::class,
         ],
 
         'api' => [],
+    ];
+
+    /**
+     * The application's route middleware.
+     *
+     * These middleware may be assigned to groups or used individually.
+     *
+     * @var array
+     */
+    protected $routeMiddleware = [
+        'auth' => \Illuminate\Auth\Middleware\Authenticate::class,
+        'auth.basic' => \Illuminate\Auth\Middleware\AuthenticateWithBasicAuth::class,
+        'authorize' => \Illuminate\Auth\Middleware\Authorize::class,
+        'backend' => \Orchestra\Foundation\Http\Middleware\UseBackendTheme::class,
+        'bindings' => \Illuminate\Routing\Middleware\SubstituteBindings::class,
+        'cache.headers' => \Illuminate\Http\Middleware\SetCacheHeaders::class,
+        'can' => \Orchestra\Foundation\Http\Middleware\Can::class,
+        'guest' => \Orchestra\Testbench\Http\Middleware\RedirectIfAuthenticated::class,
+        'signed' => \Illuminate\Routing\Middleware\ValidateSignature::class,
+        'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
     ];
 }

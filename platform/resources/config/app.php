@@ -10,9 +10,10 @@ return [
     | This value is the name of your application. This value is used when the
     | framework needs to place the application's name in a notification or
     | any other location as required by the application or its packages.
+    |
     */
 
-    'name' => 'My Application',
+    'name' => env('APP_NAME', 'My Application'),
 
     /*
     |--------------------------------------------------------------------------
@@ -52,6 +53,8 @@ return [
     */
 
     'url' => env('APP_URL', 'http://localhost'),
+
+    'api' => env('API_DOMAIN', 'http://localhost'),
 
     /*
     |--------------------------------------------------------------------------
@@ -109,23 +112,6 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Logging Configuration
-    |--------------------------------------------------------------------------
-    |
-    | Here you may configure the log settings for your application. Out of
-    | the box, Laravel uses the Monolog PHP logging library. This gives
-    | you a variety of powerful log handlers / formatters to utilize.
-    |
-    | Available Settings: "single", "daily", "syslog", "errorlog"
-    |
-    */
-
-    'log' => env('APP_LOG', 'single'),
-
-    'log_level' => env('APP_LOG_LEVEL', 'debug'),
-
-    /*
-    |--------------------------------------------------------------------------
     | Autoloaded Service Providers
     |--------------------------------------------------------------------------
     |
@@ -149,7 +135,6 @@ return [
         Illuminate\Filesystem\FilesystemServiceProvider::class,
         Illuminate\Foundation\Providers\FoundationServiceProvider::class,
         Illuminate\Hashing\HashServiceProvider::class,
-        Illuminate\Database\MigrationServiceProvider::class,
         Illuminate\Pagination\PaginationServiceProvider::class,
         Illuminate\Pipeline\PipelineServiceProvider::class,
         Illuminate\Queue\QueueServiceProvider::class,
