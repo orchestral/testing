@@ -26,7 +26,8 @@
     },
     "require-dev": {
         "orchestra/installer": "~3.7.0",
-        "orchestra/foundation": "~3.7.0"
+        "orchestra/foundation": "~3.7.0",
+        "orchestra/platform": "~3.7.0"
     },
     "extra": {
         "branch-alias": {
