@@ -96,7 +96,7 @@ abstract class TestCase extends Testbench
      */
     protected function setUpTraits()
     {
-        $uses = array_flip(class_uses_recursive(static::class));
+        $uses = \array_flip(\class_uses_recursive(static::class));
 
         if (isset($uses[Installation::class])) {
             $this->beginInstallation();
@@ -112,6 +112,6 @@ abstract class TestCase extends Testbench
      */
     protected function createAdminUser()
     {
-        return factory(User::class)->create();
+        return \factory(User::class)->create();
     }
 }
