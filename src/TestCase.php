@@ -25,7 +25,6 @@ abstract class TestCase extends Testbench
             'Orchestra\Foundation\Bootstrap\LoadFoundation',
             'Orchestra\Foundation\Bootstrap\UserAccessPolicy',
             'Orchestra\Extension\Bootstrap\LoadExtension',
-            'Orchestra\Foundation\Bootstrap\LoadUserMetaData',
             'Orchestra\View\Bootstrap\LoadCurrentTheme',
             'Orchestra\Foundation\Bootstrap\LoadExpresso',
         ];
