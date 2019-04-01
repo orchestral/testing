@@ -25,9 +25,9 @@
         "orchestra/testbench-browser-kit": "~3.8.0"
     },
     "require-dev": {
-        "orchestra/installer": "~3.8.0",
+        "orchestra/installer": "~3.8.1",
         "orchestra/foundation": "~3.8.0",
-        "orchestra/platform": "~3.8.0"
+        "orchestra/platform": "3.8.x-dev"
     },
     "extra": {
         "branch-alias": {
