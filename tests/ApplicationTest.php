@@ -2,7 +2,6 @@
 
 namespace Orchestra\Testing\Tests;
 
-use Illuminate\Routing\Router;
 use Orchestra\Testing\TestCase;
 
 class ApplicationTest extends TestCase
