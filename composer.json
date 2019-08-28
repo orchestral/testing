@@ -27,7 +27,7 @@
     "require-dev": {
         "orchestra/installer": "^4.0",
         "orchestra/foundation": "^4.0",
-        "orchestra/platform": "dev-master"
+        "orchestra/platform": "4.x-dev"
     },
     "extra": {
         "branch-alias": {
