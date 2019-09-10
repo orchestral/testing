@@ -2,6 +2,15 @@
 
 This changelog references the relevant changes (bug and security fixes) done to `orchestra/testing`.
 
+## 3.8.2
+
+Released: 2019-09-10
+
+### Changes
+
+* Assign default administrator role when using `Orchestra\Testing\TestCase::createAdminUser()`.
+* Update Orchestra Platform skeleton.
+
 ## 3.8.1
 
 Released: 2019-04-01
