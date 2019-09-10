@@ -116,7 +116,7 @@ abstract class TestCase extends Testbench
         return \tap(User::faker()->create(), static function ($user) {
             $admin = \config('orchestra/foundation::roles.admin', 1);
 
-            $user->sync([$admin]);
+            $user->roles()->sync([$admin]);
         });
     }
 }
