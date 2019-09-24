@@ -21,7 +21,7 @@
         "orchestra/avatar": "^4.0",
         "orchestra/contracts": "^4.0",
         "orchestra/testbench": "^4.0.1",
-        "orchestra/testbench-browser-kit": "^4.0"
+        "orchestra/testbench-browser-kit": "^4.0.1"
     },
     "require-dev": {
         "orchestra/installer": "^4.0",
