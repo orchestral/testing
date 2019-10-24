@@ -2,6 +2,16 @@
 
 This changelog references the relevant changes (bug and security fixes) done to `orchestra/testing`.
 
+## 4.1.2
+
+Released: 2019-10-24
+
+### Changes
+
+* Update Orchestra Platform skeleton.
+* Update minimum support for Testbench v4.3.0+. ([v4.2.0...v4.3.0](https://github.com/orchestral/testbench/compare/v4.2.0...v4.3.0))
+* Update minimum support for Testbench BrowserKit v4.3.0+. ([v4.2.0...v4.3.0](https://github.com/orchestral/testbench-browser-kit/compare/v4.2.0...v4.3.0))
+
 ## 4.1.1
 
 Released: 2019-10-11
