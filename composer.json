@@ -24,7 +24,7 @@
         "orchestra/testbench-browser-kit": "^4.3"
     },
     "require-dev": {
-        "orchestra/installer": "^4.0",
+        "orchestra/installer": "^4.3",
         "orchestra/foundation": "^4.1",
         "orchestra/platform": "4.x-dev"
     },
