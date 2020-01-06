@@ -190,12 +190,11 @@ return [
          */
         // App\Providers\AppServiceProvider::class,
         // App\Providers\AuthServiceProvider::class,
-        // App\Providers\BroadcastServiceProvider::class,
+        // // App\Providers\BroadcastServiceProvider::class,
         // App\Providers\EventServiceProvider::class,
         // App\Providers\ExtensionServiceProvider::class,
         // App\Providers\InstallerServiceProvider::class,
         // App\Providers\RouteServiceProvider::class,
-
     ],
 
     /*
