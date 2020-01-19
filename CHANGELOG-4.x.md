@@ -2,6 +2,14 @@
 
 This changelog references the relevant changes (bug and security fixes) done to `orchestra/testing`.
 
+## 4.2.0
+
+Released: 2019-10-24
+
+### Changes
+
+* Update Orchestra Platform skeleton.
+
 ## 4.1.2
 
 Released: 2019-10-24
