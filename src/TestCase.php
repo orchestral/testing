@@ -2,11 +2,11 @@
 
 namespace Orchestra\Testing;
 
-use Orchestra\Foundation\Auth\User;
 use Orchestra\Foundation\Application;
+use Orchestra\Foundation\Auth\User;
+use Orchestra\Foundation\Testing\Concerns\WithInstallation;
 use Orchestra\Foundation\Testing\Installation;
 use Orchestra\Testbench\TestCase as Testbench;
-use Orchestra\Foundation\Testing\Concerns\WithInstallation;
 
 abstract class TestCase extends Testbench
 {
