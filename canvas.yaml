@@ -1,0 +1,27 @@
+preset: package
+
+namespace: Orchestra\Testing
+user-auth-provider: Orchestra\Foundation\Auth\User
+
+paths:
+  src: src
+  resource: resources
+
+factory:
+  path: database/factories
+
+migration:
+  path: database/migrations
+  prefix: ''
+
+console:
+  namespace: Orchestra\Testing\Console
+
+model:
+  namespace: Orchestra\Testing
+
+provider:
+  namespace: Orchestra\Testing\Providers
+
+testing:
+  namespace: Orchestra\Testing\Tests

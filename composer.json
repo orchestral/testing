@@ -24,8 +24,9 @@
         "orchestra/testbench-browser-kit": "^5.0"
     },
     "require-dev": {
-        "orchestra/installer": "^5.0",
+        "orchestra/canvas": "^5.0",
         "orchestra/foundation": "^5.0",
+        "orchestra/installer": "^5.0",
         "orchestra/platform": "dev-master"
     },
     "extra": {

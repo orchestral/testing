@@ -107,10 +107,12 @@ abstract class TestCase extends Testbench
     /**
      * Create admin user.
      *
+     * @param  array  $attributes
+     *
      * @return \Orchestra\Foundation\Auth\User
      */
-    protected function createAdminUser()
+    protected function createAdminUser(array $attributes = [])
     {
-        return \factory(User::class)->create();
+        return User::hsFaker()->state('admin')->create($attributes);
     }
 }
