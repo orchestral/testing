@@ -27,7 +27,7 @@
         "orchestra/canvas": "^5.0",
         "orchestra/foundation": "^5.0",
         "orchestra/installer": "^5.0",
-        "orchestra/platform": "dev-master"
+        "orchestra/platform": "5.x-dev"
     },
     "extra": {
         "branch-alias": {
