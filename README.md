@@ -11,20 +11,6 @@ This repository contains the testing helper code of the Orchestra Platform. If y
 
 ## Installation
 
-To install through composer, simply put the following in your `composer.json` file:
+To install through composer by using the following command:
 
-```json
-{
-    "require-dev": {
-        "orchestra/testing": "^4.0"
-    }
-}
-```
-
-And then run `composer install` from the terminal.
-
-### Quick Installation
-
-Above installation can also be simplify by using the following command:
-
-    composer require --dev "orchestra/testing=^4.0"
+    composer require --dev "orchestra/testing"

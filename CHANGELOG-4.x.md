@@ -1,4 +1,4 @@
-# Changelog for 3.x
+# Changelog for 4.x
 
 This changelog references the relevant changes (bug and security fixes) done to `orchestra/testing`.
 
@@ -56,4 +56,4 @@ Released: 2019-09-13
 
 ### Changes
 
-* Update support for Laravel Framework v6.0.
+* Update support for Laravel Framework v6.
