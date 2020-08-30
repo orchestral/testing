@@ -5,6 +5,7 @@ namespace Orchestra\Testing;
 use Orchestra\Foundation\Application;
 use Orchestra\Foundation\Auth\User;
 use Orchestra\Foundation\Testing\Concerns\WithInstallation;
+use Orchestra\Foundation\Testing\Factories\UserFactory;
 use Orchestra\Foundation\Testing\Installation;
 use Orchestra\Testbench\TestCase as Testbench;
 
@@ -115,6 +116,6 @@ abstract class TestCase extends Testbench
      */
     protected function createAdminUser(array $attributes = [])
     {
-        return User::hsFaker()->state('admin')->create($attributes);
+        return UserFactory::new()->admin()->create($attributes);
     }
 }
